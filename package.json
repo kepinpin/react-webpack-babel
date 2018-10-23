@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+	"start": "webpack-dev-server --open --mode development"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
