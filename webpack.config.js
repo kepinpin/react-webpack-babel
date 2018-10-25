@@ -1,12 +1,18 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+	entry: "./src/js/components/container/FormContainer.js",
 	module: {
-	rules: [
+		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: {loader: "babel-loader"}
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: ["@babel/preset-env", "@babel/preset-react"]
+					}
+				}
 			},
 			{
 				test: /\.html$/,
@@ -17,7 +23,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebPackPlugin({
-			template: "./src/index.html",
+			template: "./src/html/index.html",
 			filename: "./index.html"
 		})
 	]
